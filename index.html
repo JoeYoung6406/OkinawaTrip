@@ -16,6 +16,7 @@
       --muted: #78909C;
       --white: #FFFFFF;
       --shadow: 0 2px 14px rgba(0,105,148,0.11);
+      --young: #7B1FA2;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -28,58 +29,28 @@
     /* ── Hero ── */
     .hero {
       background: linear-gradient(160deg, #003F5C 0%, #006994 45%, #00ACC1 100%);
-      color: white;
-      padding: 48px 20px 56px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      color: white; padding: 48px 20px 56px;
+      text-align: center; position: relative; overflow: hidden;
     }
-    .hero-wave {
-      position: absolute; bottom: -2px; left: 0; right: 0;
-      height: 40px; overflow: hidden;
-    }
+    .hero-wave { position: absolute; bottom: -2px; left: 0; right: 0; height: 40px; overflow: hidden; }
     .hero-wave svg { display: block; width: 100%; }
     .hero-emoji { font-size: 3em; margin-bottom: 10px; display: block; }
     .hero h1 { font-size: 2em; font-weight: 900; letter-spacing: 3px; margin-bottom: 6px; }
     .hero-sub { opacity: .85; font-size: .95em; margin-bottom: 14px; }
-    .hero-dates {
-      display: inline-block;
-      background: rgba(255,255,255,.2);
-      border: 1px solid rgba(255,255,255,.35);
-      padding: 6px 20px; border-radius: 20px;
-      font-size: .9em; letter-spacing: 1px;
-    }
+    .hero-dates { display: inline-block; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.35); padding: 6px 20px; border-radius: 20px; font-size: .9em; letter-spacing: 1px; }
 
     /* ── Group chips ── */
-    .groups {
-      display: flex; gap: 10px; flex-wrap: wrap;
-      justify-content: center; padding: 22px 16px 10px;
-    }
-    .g-chip {
-      background: white; border-radius: 14px; padding: 12px 16px;
-      box-shadow: var(--shadow); text-align: center;
-      flex: 1; min-width: 130px; max-width: 190px;
-    }
+    .groups { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; padding: 22px 16px 10px; }
+    .g-chip { background: white; border-radius: 14px; padding: 12px 16px; box-shadow: var(--shadow); text-align: center; flex: 1; min-width: 130px; max-width: 190px; }
     .g-chip .gi { font-size: 1.7em; margin-bottom: 4px; }
     .g-chip .gl { font-size: .75em; color: var(--muted); }
     .g-chip .gv { font-size: .85em; font-weight: 700; color: var(--ocean); margin-top: 2px; }
 
     /* ── Sticky Day Nav ── */
-    .day-nav {
-      position: sticky; top: 0; z-index: 200;
-      background: white; box-shadow: 0 2px 8px rgba(0,0,0,.09);
-      overflow-x: auto; white-space: nowrap;
-      padding: 0 8px; scrollbar-width: none;
-    }
+    .day-nav { position: sticky; top: 0; z-index: 200; background: white; box-shadow: 0 2px 8px rgba(0,0,0,.09); overflow-x: auto; white-space: nowrap; padding: 0 8px; scrollbar-width: none; }
     .day-nav::-webkit-scrollbar { display: none; }
     .nav-inner { display: inline-flex; }
-    .nt {
-      display: inline-block; padding: 10px 13px;
-      font-size: .8em; font-weight: 700;
-      color: var(--muted); text-decoration: none;
-      border-bottom: 3px solid transparent;
-      transition: color .2s, border-color .2s;
-    }
+    .nt { display: inline-block; padding: 10px 13px; font-size: .8em; font-weight: 700; color: var(--muted); text-decoration: none; border-bottom: 3px solid transparent; transition: color .2s, border-color .2s; }
     .nt:hover { color: var(--ocean); }
     .nt.active { color: var(--ocean); border-bottom-color: var(--ocean); }
 
@@ -88,40 +59,23 @@
 
     /* ── Day Header ── */
     .day-sec { padding-top: 22px; }
-    .dh {
-      display: flex; align-items: center; gap: 14px;
-      background: linear-gradient(135deg, var(--ocean), var(--teal));
-      color: white; padding: 15px 18px;
-      border-radius: 16px 16px 0 0;
-    }
-    .dn {
-      background: rgba(255,255,255,.22); border-radius: 50%;
-      width: 48px; height: 48px; display: flex; align-items: center;
-      justify-content: center; font-size: .7em; font-weight: 900;
-      text-align: center; line-height: 1.25; flex-shrink: 0;
-    }
+    .dh { display: flex; align-items: center; gap: 14px; background: linear-gradient(135deg, var(--ocean), var(--teal)); color: white; padding: 15px 18px; border-radius: 16px 16px 0 0; }
+    .dn { background: rgba(255,255,255,.22); border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; font-size: .7em; font-weight: 900; text-align: center; line-height: 1.25; flex-shrink: 0; }
     .dt { font-size: 1.1em; font-weight: 800; }
     .ds { font-size: .78em; opacity: .85; margin-top: 2px; }
-    .hbadge {
-      margin-left: auto; background: var(--coral);
-      padding: 4px 11px; border-radius: 12px;
-      font-size: .72em; font-weight: 700; white-space: nowrap;
-    }
+    .hbadge { margin-left: auto; background: var(--coral); padding: 4px 11px; border-radius: 12px; font-size: .72em; font-weight: 700; white-space: nowrap; }
 
     /* ── Timeline ── */
-    .tl {
-      background: white; border-radius: 0 0 16px 16px;
-      padding: 4px 0; box-shadow: var(--shadow); margin-bottom: 8px;
-    }
-    .ti {
-      display: flex; align-items: flex-start; gap: 0;
-      padding: 11px 16px; border-bottom: 1px solid #EEF2F5;
-    }
+    .tl { background: white; border-radius: 0 0 16px 16px; padding: 4px 0; box-shadow: var(--shadow); margin-bottom: 8px; }
+    .ti { display: flex; align-items: flex-start; padding: 11px 16px; border-bottom: 1px solid #EEF2F5; }
     .ti:last-child { border-bottom: none; }
     .ti.hl { background: linear-gradient(135deg, #FFF8E1, #FFF3E0); border-left: 3px solid var(--coral); }
     .ti.hl .tt { color: var(--coral); }
+    .ti.young { background: linear-gradient(135deg, #F3E5F5, #EDE7F6); border-left: 3px solid var(--young); }
+    .ti.young .tt { color: var(--young); }
     .tt { min-width: 56px; font-size: .75em; font-weight: 800; color: var(--ocean); padding-top: 3px; flex-shrink: 0; }
     .tdot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); margin-top: 6px; flex-shrink: 0; margin-right: 10px; }
+    .ti.young .tdot { background: var(--young); }
     .tc { flex: 1; }
     .sn { font-size: .93em; font-weight: 700; color: var(--dark); line-height: 1.35; }
     .sd { font-size: .78em; color: var(--muted); margin-top: 3px; line-height: 1.4; }
@@ -133,14 +87,16 @@
     .bst { background:#FFF8E1; color:#F57F17; }
     .bht { background:#FFE0B2; color:#BF360C; }
     .btp { background:#E3F2FD; color:#1565C0; }
+    .byk { background:#F3E5F5; color:#6A1B9A; }
+
+    /* ── Split group label ── */
+    .split-label { font-size: .72em; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; padding: 8px 16px 4px; color: var(--muted); background: #F8FAFB; border-bottom: 1px solid #EEF2F5; }
+    .split-label.lbl-young { color: var(--young); }
 
     /* ── Info card ── */
-    .card {
-      background: white; border-radius: 16px; padding: 16px;
-      box-shadow: var(--shadow); margin-bottom: 8px;
-    }
+    .card { background: white; border-radius: 16px; padding: 16px; box-shadow: var(--shadow); margin-bottom: 8px; }
     .card h3 { font-size: .88em; color: var(--ocean); font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
-    .hgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .hgrid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
     .hi { background: var(--sky); border-radius: 12px; padding: 12px; }
     .hi .hd { font-size: .72em; color: var(--muted); }
     .hi .hn { font-size: .9em; font-weight: 800; color: var(--dark); margin: 4px 0 2px; }
@@ -151,24 +107,10 @@
     .cv { font-weight: 700; color: var(--ocean); }
 
     /* ── Tip box ── */
-    .tip {
-      background: #E3F2FD; border-left: 3px solid var(--teal);
-      border-radius: 0 12px 12px 0; padding: 11px 14px;
-      margin: 8px 0; font-size: .81em; color: #1A237E; line-height: 1.5;
-    }
+    .tip { background: #E3F2FD; border-left: 3px solid var(--teal); border-radius: 0 12px 12px 0; padding: 11px 14px; margin: 8px 0; font-size: .81em; color: #1A237E; line-height: 1.5; }
     .tip strong { display: block; margin-bottom: 3px; }
-
-    /* ── TBD ── */
-    .tbd {
-      background: #F5F5F5; border: 2px dashed #BDBDBD;
-      border-radius: 16px; padding: 30px; text-align: center;
-      color: var(--muted); margin-bottom: 8px;
-    }
-    .tbd .ti2 { font-size: 2em; margin-bottom: 8px; }
-    .tbd p { font-size: .88em; }
-
-    /* ── Stars ── */
-    .stars { color: #FFB300; }
+    .tip-warn { background: #FFF8E1; border-left-color: #F57F17; color: #4E342E; }
+    .tip-young { background: #F3E5F5; border-left-color: var(--young); color: #4A148C; }
 
     /* ── Section label ── */
     .slabel { font-size: .72em; font-weight: 800; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; padding: 20px 0 8px; }
@@ -176,9 +118,12 @@
     /* ── Footer ── */
     footer { text-align: center; padding: 30px 20px; font-size: .78em; color: var(--muted); }
 
-    @media (max-width: 380px) {
+    @media (max-width: 480px) {
       .hero h1 { font-size: 1.7em; }
       .hgrid { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 481px) and (max-width: 600px) {
+      .hgrid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -236,7 +181,13 @@
           <div class="hd">6/28 — 6/30 &nbsp;（2晚）</div>
           <div class="hn">ASBO STAY</div>
           <div class="hl2">📍 金武町</div>
-          <div class="hf">♨️ 天然溫泉 · 住客免費</div>
+          <div class="hf">♨️ 天然溫泉 · 住客免費 · 無早餐</div>
+        </div>
+        <div class="hi">
+          <div class="hd">6/30 &nbsp;（1晚，年輕人）</div>
+          <div class="hn">Nest Naha Tissage</div>
+          <div class="hl2">📍 那霸市</div>
+          <div class="hf">設計旅店 · 確認地址與路線</div>
         </div>
       </div>
     </div>
@@ -244,6 +195,8 @@
       <h3>🚗 交通重點</h3>
       <div class="cr"><span>機場接送</span><span class="cv">租車行免費接機 ✓</span></div>
       <div class="cr"><span>取車</span><span class="cv">6/28 直送 SOBE 旅館取車</span></div>
+      <div class="cr"><span>還車</span><span class="cv">7/1 09:30 前 · 機場入口加油站先加油</span></div>
+      <div class="cr"><span>高速公路</span><span class="cv">6/30 ETC ¥370（32分鐘）</span></div>
       <div class="cr"><span>長輩回程</span><span class="cv">6/30 18:00 那霸機場</span></div>
       <div class="cr"><span>年輕人回程</span><span class="cv">7/1 13:15 那霸機場</span></div>
     </div>
@@ -300,7 +253,7 @@
         <div class="tt">11:10</div><div class="tdot"></div>
         <div class="tc">
           <div class="sn">🏯 首里城</div><div class="sd">世界遺產 · 琉球王國紅色正殿</div>
-          <div class="bgs"><span class="b bst">⭐⭐⭐⭐⭐ 必訪</span></div>
+          <div class="bgs"><span class="b bco">💴 ¥400 / 人</span><span class="b bst">⭐⭐⭐⭐⭐ 必訪</span></div>
         </div>
       </div>
       <div class="ti">
@@ -334,13 +287,13 @@
       <div class="ti">
         <div class="tt">18:00</div><div class="tdot"></div>
         <div class="tc">
-          <div class="sn">🎡 美國村</div><div class="sd">購物 · 摩天輪 · 美食林立 · 年輕人抵達會合</div>
+          <div class="sn">🎡 美國村</div><div class="sd">購物 · 摩天輪 · 美食林立</div>
         </div>
       </div>
       <div class="ti hl">
         <div class="tt">20:00</div><div class="tdot"></div>
         <div class="tc">
-          <div class="sn">🎆 美國村煙火秀</div><div class="sd">約 15 分鐘精彩煙火表演</div>
+          <div class="sn">🎆 美國村煙火秀</div><div class="sd">約 15 分鐘精彩煙火 · 年輕人 18:30 出發，約 20:00 抵達衝煙火！</div>
           <div class="bgs"><span class="b bst">⭐⭐⭐⭐⭐ 今日亮點</span><span class="b bfr">免費觀賞</span></div>
         </div>
       </div>
@@ -348,10 +301,6 @@
         <div class="tt">21:30</div><div class="tdot"></div>
         <div class="tc"><div class="sn">🏨 返回 Glory Island SOBE</div></div>
       </div>
-    </div>
-    <div class="tip">
-      <strong>💡 包車路線說明</strong>
-      全程不走回頭路設計，景點路線已最佳化。年輕人 18:30 台灣出發，約 20:00 抵達那霸，直奔美國村趕煙火！
     </div>
   </div>
 
@@ -415,7 +364,7 @@
         <div class="tt">18:30</div><div class="tdot"></div>
         <div class="tc">
           <div class="sn">🦐 Kouri Shrimp 晚餐</div><div class="sd">外帶蝦蝦飯回 ASBO 享用</div>
-          <div class="bgs"><span class="b bfd">外帶</span></div>
+          <div class="bgs"><span class="b bfd">💴 ¥1,000+</span><span class="b btp">外帶</span></div>
         </div>
       </div>
       <div class="ti">
@@ -435,7 +384,7 @@
     </div>
     <div class="tip">
       <strong>💡 不走回頭路設計</strong>
-      全程由南往北規劃：玉泉洞 → 宜野灣 → 萬座毛 → 名護鳳梨園 → 古宇利島，路線順暢，最後直奔金武 ASBO 住宿。
+      全程由南往北：玉泉洞 → 宜野灣 → 萬座毛 → 名護鳳梨園 → 古宇利島，路線順暢，最後直奔金武 ASBO 住宿。
     </div>
   </div>
 
@@ -443,11 +392,79 @@
   <div id="d629" class="day-sec">
     <div class="dh">
       <div class="dn">6/29<br>一</div>
-      <div><div class="dt">🚗 租車 Day 2</div><div class="ds">沖繩北部繼續探索</div></div>
+      <div><div class="dt">🚗 租車 Day 2</div><div class="ds">藍洞 → 美麗海水族館 → 焼肉</div></div>
+      <div class="hbadge">🤿 藍洞</div>
     </div>
-    <div class="tbd">
-      <div class="ti2">📋</div>
-      <p>行程規劃中，敬請期待</p>
+    <div class="tl">
+      <div class="ti">
+        <div class="tt">07:00</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🍳 早餐</div><div class="sd">King Tacos 或 MaxValu（ASBO 無早餐）</div>
+          <div class="bgs"><span class="b bco">💴 ¥500 / 人</span></div>
+        </div>
+      </div>
+      <div class="split-label lbl-young">🧑 年輕人 09:00–11:00</div>
+      <div class="ti young">
+        <div class="tt">09:00</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🤿 藍洞浮潛（年輕人專屬）</div><div class="sd">恩納村 · 湛藍水下洞穴 · 含裝備 · Klook 預訂</div>
+          <div class="bgs"><span class="b bco">💴 ¥3,500 / 人</span><span class="b byk">Klook 預訂</span></div>
+        </div>
+      </div>
+      <div class="split-label">👴 長輩 + 中年 09:00–11:00</div>
+      <div class="ti">
+        <div class="tt">09:00</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">♨️ ASBO 溫泉放鬆</div><div class="sd">留守金武溫泉休息，等年輕人回來</div>
+          <div class="bgs"><span class="b bfr">住客免費</span></div>
+        </div>
+      </div>
+      <div class="split-label">👥 全組集合</div>
+      <div class="ti">
+        <div class="tt">12:00</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🚗 年輕人接長輩，全組出發</div><div class="sd">前往本部，車程約 40 分鐘</div>
+        </div>
+      </div>
+      <div class="ti hl">
+        <div class="tt">13:00</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🐟 ウミカイオコロ 海鮮午餐</div><div class="sd">本部町 · 評分 4.6 · 建議現金 · 週二公休（週一正常營業）</div>
+          <div class="bgs"><span class="b bfd">💴 ¥1,800 / 人</span><span class="b btp">現金優先</span></div>
+        </div>
+      </div>
+      <div class="ti hl">
+        <div class="tt">14:30</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🦈 美麗海水族館（海洋博公園）</div><div class="sd">本部 · 世界最大鯨鯊水槽 · 海豚秀 14:30 / 17:30 · 輪椅無障礙</div>
+          <div class="bgs"><span class="b bfr">Fun Pass 免費</span><span class="b bst">⭐⭐⭐⭐⭐</span><span class="b btp">慢遊 2.5 小時</span></div>
+        </div>
+      </div>
+      <div class="ti">
+        <div class="tt">17:30</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🌅 Ocean Expo Park 夕陽</div><div class="sd">水族館相鄰 · 夕陽 19:00–19:30 · 免費入場</div>
+          <div class="bgs"><span class="b bfr">免費</span></div>
+        </div>
+      </div>
+      <div class="ti hl">
+        <div class="tt">19:30</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🥩 焼肉 Motobu 晚餐</div><div class="sd">需提前電話訂位</div>
+          <div class="bgs"><span class="b bfd">💴 ¥2,000–3,000 / 人</span><span class="b byk">需訂位</span></div>
+        </div>
+      </div>
+      <div class="ti">
+        <div class="tt">21:30</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🛒 MaxValu Kin 採購</div><div class="sd">採購 6/30 早餐食材</div>
+          <div class="bgs"><span class="b bco">💴 ¥500</span><span class="b btp">24H</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="tip tip-warn">
+      <strong>⚠️ 焼肉 Motobu 需提前訂位</strong>
+      建議前一天晚上就打電話預約，否則 19:30 的位置很難保留。
     </div>
   </div>
 
@@ -455,15 +472,75 @@
   <div id="d630" class="day-sec">
     <div class="dh">
       <div class="dn">6/30<br>二</div>
-      <div><div class="dt">🏝️ 繼續探索</div><div class="ds">長輩 + 中年組 18:00 回程</div></div>
+      <div><div class="dt">🛍️ AEON RYCOM → 長輩回程</div><div class="ds">長輩 18:00 航班 · 年輕人繼續留沖繩</div></div>
     </div>
-    <div class="tbd">
-      <div class="ti2">📋</div>
-      <p>行程規劃中，敬請期待</p>
+    <div class="tl">
+      <div class="ti">
+        <div class="tt">07:00</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🍳 早餐</div><div class="sd">前一晚 MaxValu 採購的食材</div>
+        </div>
+      </div>
+      <div class="ti">
+        <div class="tt">09:00</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🏨 ASBO 退房</div><div class="sd">10:00 前退房完畢 · 裝好全部行李</div>
+          <div class="bgs"><span class="b btp">截止 10:00</span></div>
+        </div>
+      </div>
+      <div class="ti">
+        <div class="tt">10:00</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🏪 道の駅 許田（名護）</div><div class="sd">在地特產：黑糖 · 泡盛 · 熱帶水果</div>
+          <div class="bgs"><span class="b bfr">免費入場</span></div>
+        </div>
+      </div>
+      <div class="ti hl">
+        <div class="tt">11:00</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🛍️ AEON RYCOM 購物</div><div class="sd">北谷 · 3.5 小時買買買 · 美食廣場午餐 · 輪椅無障礙 · 最後伴手禮補貨</div>
+          <div class="bgs"><span class="b bfr">免費入場</span><span class="b btp">3.5 小時</span></div>
+        </div>
+      </div>
+      <div class="ti">
+        <div class="tt">14:30</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🚗 前往那霸機場</div><div class="sd">沖繩南IC → 那霸IC · 約 32 分鐘</div>
+          <div class="bgs"><span class="b bco">ETC ¥370</span></div>
+        </div>
+      </div>
+      <div class="split-label">👴 長輩 + 中年</div>
+      <div class="ti">
+        <div class="tt">16:00</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">✈️ 那霸機場 報到</div><div class="sd">18:00 航班 · 請 16:00 抵達辦理 check-in</div>
+          <div class="bgs"><span class="b btp">16:00 到機場</span></div>
+        </div>
+      </div>
+      <div class="split-label lbl-young">🧑 年輕人（送機後繼續）</div>
+      <div class="ti young">
+        <div class="tt">16:30</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🌅 瀬長島 Umikaji Terrace 夕陽</div><div class="sd">機場旁 3 分鐘 · 夕陽約 19:00</div>
+          <div class="bgs"><span class="b bst">⭐ 夕陽打卡</span></div>
+        </div>
+      </div>
+      <div class="ti young">
+        <div class="tt">18:30</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🛍️ Outlet 購物</div><div class="sd">iias Toyosaki + Ashibinaa · 品牌折扣</div>
+        </div>
+      </div>
+      <div class="ti young">
+        <div class="tt">20:30</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🏨 入住 Nest Naha Tissage Hotel</div><div class="sd">那霸設計旅店 · 確認地址與明日還車路線</div>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <h3>✈️ 長輩 + 中年組 回程</h3>
-      <div class="cr"><span>6/30 18:00</span><span class="cv">那霸機場 — 回台灣</span></div>
+    <div class="tip tip-young">
+      <strong>🧑 年輕人 6/30 提醒</strong>
+      送完長輩後繼續玩！Umikaji Terrace 離機場只有 3 分鐘，超方便。入住 Nest Naha Tissage 後先確認 7/1 還車路線和加油站位置。
     </div>
   </div>
 
@@ -471,49 +548,93 @@
   <div id="d701" class="day-sec">
     <div class="dh">
       <div class="dn">7/1<br>三</div>
-      <div><div class="dt">✈️ 年輕人回程日</div><div class="ds">13:15 班機回台</div></div>
+      <div><div class="dt">✈️ 年輕人回程日</div><div class="ds">09:30 還車 · 13:15 航班</div></div>
     </div>
-    <div class="tbd">
-      <div class="ti2">📋</div>
-      <p>早上行程規劃中</p>
+    <div class="tl">
+      <div class="ti">
+        <div class="tt">07:00</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🍳 早餐</div><div class="sd">飯店附近或 7-Eleven</div>
+          <div class="bgs"><span class="b bco">💴 ¥500 / 人</span></div>
+        </div>
+      </div>
+      <div class="ti hl">
+        <div class="tt">07:30</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">⛽ 加油 → 🚗 前往機場還車</div><div class="sd">機場入口加油站先加滿油，再辦理還車</div>
+          <div class="bgs"><span class="b btp">先加油再還車</span></div>
+        </div>
+      </div>
+      <div class="ti">
+        <div class="tt">09:30</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">🚗 還車完畢</div><div class="sd">check-out 約 30–40 分鐘</div>
+          <div class="bgs"><span class="b btp">截止 09:30</span></div>
+        </div>
+      </div>
+      <div class="ti hl">
+        <div class="tt">10:15</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">✈️ 那霸機場 報到截止</div><div class="sd">13:15 航班 · 10:15 報到截止</div>
+          <div class="bgs"><span class="b btp">10:15 報到截止</span></div>
+        </div>
+      </div>
+      <div class="ti">
+        <div class="tt">13:15</div><div class="tdot"></div>
+        <div class="tc">
+          <div class="sn">✈️ 那霸出發 → 台灣</div><div class="sd">旅途結束！</div>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <h3>✈️ 年輕人 回程</h3>
-      <div class="cr"><span>7/1 13:15</span><span class="cv">那霸機場 — 回台灣</span></div>
+    <div class="tip tip-warn">
+      <strong>⚠️ 7/1 時間很緊，請注意</strong>
+      還車辦理手續需 30–40 分鐘，07:30 就要出發。加油站在機場入口，先加油再進還車場。
     </div>
   </div>
 
   <!-- Tips -->
   <div id="tips" class="day-sec">
-    <div class="slabel">💡 實用提示 & 費用</div>
+    <div class="slabel">💡 實用提示 &amp; 費用</div>
     <div class="card">
       <h3>💰 費用概覽</h3>
+      <div class="cr"><span>🛒 MaxValu 首日採購（6人）</span><span class="cv">¥3,000</span></div>
       <div class="cr"><span>🏛️ 縣立博物館</span><span class="cv">¥530 / 人</span></div>
+      <div class="cr"><span>🏯 首里城</span><span class="cv">¥400 / 人</span></div>
       <div class="cr"><span>🍜 首里そば 午餐</span><span class="cv">¥900–1,100 / 人</span></div>
       <div class="cr"><span>🥘 PARCO CITY 文字燒</span><span class="cv">¥1,500–2,500 / 人</span></div>
       <div class="cr"><span>🐘 萬座毛</span><span class="cv">¥100 / 人</span></div>
-      <div class="cr"><span>🛒 MaxValu 首日採購（6人）</span><span class="cv">¥3,000</span></div>
+      <div class="cr"><span>🦐 Kouri Shrimp 外帶</span><span class="cv">¥1,000+</span></div>
+      <div class="cr"><span>🍳 早餐（各日）</span><span class="cv">¥500 / 人</span></div>
+      <div class="cr"><span>🤿 藍洞浮潛（年輕人）</span><span class="cv">¥3,500 / 人</span></div>
+      <div class="cr"><span>🐟 ウミカイオコロ 海鮮午餐</span><span class="cv">¥1,800 / 人</span></div>
+      <div class="cr"><span>🥩 焼肉 Motobu 晚餐</span><span class="cv">¥2,000–3,000 / 人</span></div>
+      <div class="cr"><span>🚗 高速公路（6/30）</span><span class="cv">ETC ¥370</span></div>
     </div>
     <div class="card">
       <h3>🎫 Fun Pass 免費景點</h3>
       <div class="cr"><span>🪨 玉泉洞（おきなわワールド）</span><span class="cv">✅ 免費</span></div>
       <div class="cr"><span>🍍 名護鳳梨園</span><span class="cv">✅ 免費</span></div>
+      <div class="cr"><span>🦈 美麗海水族館</span><span class="cv">✅ 免費</span></div>
+    </div>
+    <div class="card">
+      <h3>📋 需提前預訂 / 確認</h3>
+      <div class="cr"><span>🤿 藍洞浮潛</span><span class="cv">Klook 預訂</span></div>
+      <div class="cr"><span>🥘 PARCO CITY 文字燒</span><span class="cv">電話/網路預訂</span></div>
+      <div class="cr"><span>🥩 焼肉 Motobu</span><span class="cv">電話預訂</span></div>
+      <div class="cr"><span>🐟 ウミカイオコロ</span><span class="cv">週二公休 · 確認營業</span></div>
+      <div class="cr"><span>🏨 Nest Naha Tissage</span><span class="cv">確認地址 &amp; 路線</span></div>
     </div>
     <div class="tip">
       <strong>🧥 玉泉洞必帶薄外套</strong>
-      洞內全年恆溫約 15°C，夏天進去會感覺非常涼，建議帶薄外套或輕薄帽T備用。
+      洞內全年恆溫約 15°C，夏天進去超涼，建議帶薄外套或輕薄帽T。
     </div>
     <div class="tip">
-      <strong>🍽️ PARCO CITY 文字燒需提前預訂</strong>
-      週日假日人潮擁擠，強烈建議前一天就先打電話預訂，否則等候時間可能超過 1 小時。
+      <strong>🦈 美麗海水族館海豚秀時間</strong>
+      海豚表演場次：14:30 / 17:30，進場後先確認時刻表，安排好參觀節奏。
     </div>
     <div class="tip">
       <strong>♿ 長輩友善設計</strong>
-      全程已考慮長輩需求：包車接駁舒適、主要景點均有輪椅無障礙設施、步道平坦。
-    </div>
-    <div class="tip">
-      <strong>🌅 知念岬公園黃金時段</strong>
-      16:00 抵達可以欣賞太平洋全景，夕陽時分光線最漂亮，建議多停留一點時間拍照。
+      主要景點均有輪椅無障礙設施（AEON RYCOM、美麗海水族館、ASBO 溫泉等），包車日路線也已考量長輩體力。
     </div>
   </div>
 
@@ -525,11 +646,8 @@
 </footer>
 
 <script>
-  // Active nav tab on scroll
   const sections = [...document.querySelectorAll('[id]')];
   const tabs = document.querySelectorAll('.nt');
-  const nav = document.querySelector('.day-nav');
-
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -537,15 +655,11 @@
         tabs.forEach(t => {
           const match = t.getAttribute('href') === '#' + id;
           t.classList.toggle('active', match);
-          if (match) {
-            // Scroll tab into view
-            t.scrollIntoView({ inline: 'center', block: 'nearest' });
-          }
+          if (match) t.scrollIntoView({ inline: 'center', block: 'nearest' });
         });
       }
     });
   }, { rootMargin: '-25% 0px -65% 0px' });
-
   sections.forEach(s => io.observe(s));
 </script>
 </body>
